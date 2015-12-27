@@ -38,7 +38,7 @@ cacheSolve <- function(x, ...) {
 
 
 ##Test Script
-testMatrix<-matrix(rnorm(40000,200,200),ncol=4,nrow=4)
+testMatrix<-matrix(rnorm(40000,2,4),ncol=200,nrow=200)
 newMatrix<-makeCacheMatrix(testMatrix)
 cacheSolve(newMatrix)
 
@@ -46,14 +46,12 @@ cacheSolve(newMatrix)
 
 start.time <- Sys.time()
   b2<-solve(testMatrix)
-  b2
-end.time <- Sys.time()
+ end.time <- Sys.time()
 time.taken <- end.time - start.time
 time.taken
 
 start.time <- Sys.time()
-b3<-newMatrix$getinverse()
-b3
+   b3<-newMatrix$getinverse()
 end.time <- Sys.time()
 time.taken <- end.time - start.time
 time.taken
